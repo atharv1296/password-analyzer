@@ -13,14 +13,14 @@ export default function ImprovementSuggestions() {
     <div>
       <div className="flex justify-between items-center mb-2">
         <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center">
-          <Wand2 className="h-4 w-4 mr-2 text-blue-500 dark:text-blue-400" />
-          Improvement Suggestions
+          <Wand2 className="h-4 w-4 mr-2 text-purple-500 dark:text-purple-400" />
+          Improvement Strategies
         </h3>
         <Button
           variant="link"
           size="sm"
           onClick={toggleVisibility}
-          className="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 p-0 h-auto"
+          className="text-xs text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300 p-0 h-auto"
         >
           {isVisible ? 'Hide suggestions' : 'Show suggestions'}
         </Button>
@@ -28,12 +28,12 @@ export default function ImprovementSuggestions() {
       
       {isVisible && (
         <div className="space-y-3">
-          <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800">
-            <h4 className="font-medium text-blue-800 dark:text-blue-300 text-sm">Use a passphrase</h4>
-            <p className="text-xs text-blue-700 dark:text-blue-400 mt-1">
+          <div className="p-3 bg-pink-50 dark:bg-pink-900/20 rounded-lg border border-pink-100 dark:border-pink-800">
+            <h4 className="font-medium text-pink-800 dark:text-pink-300 text-sm">Use a passphrase</h4>
+            <p className="text-xs text-pink-700 dark:text-pink-400 mt-1">
               Combine 4+ random words for a strong, memorable password.
             </p>
-            <p className="mt-2 p-1 bg-white dark:bg-gray-800 rounded border border-blue-200 dark:border-blue-700 text-xs font-mono">
+            <p className="mt-2 p-1 bg-white dark:bg-gray-800 rounded border border-pink-200 dark:border-pink-700 text-xs font-mono">
               correct-horse-battery-staple
             </p>
           </div>

@@ -37,14 +37,14 @@ export default function PasswordAnalyzer() {
     <div className="min-h-screen flex items-center justify-center px-4 py-12 bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
       <Card className="w-full max-w-md overflow-hidden">
         {/* Header */}
-        <div className="px-6 py-4 bg-gradient-to-r from-blue-500 to-blue-600 dark:from-blue-600 dark:to-blue-700">
+        <div className="px-6 py-4 bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-700 dark:to-pink-600">
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-bold text-white flex items-center gap-2">
               <Shield className="w-5 h-5" /> Password Strength Analyzer
             </h1>
             <ModeToggle />
           </div>
-          <p className="text-blue-100 text-sm mt-1">Check how secure your password is</p>
+          <p className="text-purple-50 text-sm mt-1">Secure your digital identity with strong passwords</p>
         </div>
 
         {/* Main content */}
@@ -80,10 +80,21 @@ export default function PasswordAnalyzer() {
         </CardContent>
 
         {/* Footer */}
-        <div className="px-6 py-3 bg-gray-50 dark:bg-gray-700/50 border-t border-gray-200 dark:border-gray-700">
-          <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
-            Your password is analyzed securely in your browser and is never sent to a server.
-          </p>
+        <div className="px-6 py-4 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+          <div className="space-y-3">
+            <p className="text-xs text-gray-600 dark:text-gray-300">
+              <span className="font-semibold">Privacy Notice:</span> Your password is analyzed securely in your browser and is never sent to a server.
+            </p>
+            <div className="text-xs text-gray-500 dark:text-gray-400 space-y-1">
+              <p className="font-medium text-purple-700 dark:text-purple-400">Password Security Tips:</p>
+              <ul className="list-disc pl-4 space-y-0.5">
+                <li>Use a different password for each account</li>
+                <li>Consider using a password manager</li>
+                <li>Enable two-factor authentication when available</li>
+                <li>Change sensitive passwords every 3-6 months</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </Card>
     </div>

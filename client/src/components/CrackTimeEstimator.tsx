@@ -15,7 +15,7 @@ export default function CrackTimeEstimator({
   return (
     <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
       <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 flex items-center">
-        <Clock className="h-4 w-4 mr-2 text-blue-500 dark:text-blue-400" />
+        <Clock className="h-4 w-4 mr-2 text-purple-500 dark:text-purple-400" />
         Estimated Time to Crack
       </h3>
       <div className="flex flex-col">

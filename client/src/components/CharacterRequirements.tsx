@@ -41,7 +41,7 @@ export default function CharacterRequirements({ requirements }: CharacterRequire
   return (
     <div className="mb-6">
       <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 flex items-center">
-        <CheckSquare className="h-4 w-4 mr-2 text-blue-500 dark:text-blue-400" />
+        <CheckSquare className="h-4 w-4 mr-2 text-purple-500 dark:text-purple-400" />
         Character Requirements
       </h3>
       <div className="grid grid-cols-2 gap-2">

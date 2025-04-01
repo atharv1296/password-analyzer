@@ -26,7 +26,7 @@ export default function PasswordFeedback({ warnings, suggestions }: PasswordFeed
           key={`${type}-${index}`} 
           className={`p-2 ${isWarning 
             ? 'bg-red-50 dark:bg-red-900/30 text-red-700 dark:text-red-400 border-red-200 dark:border-red-800' 
-            : 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 border-blue-200 dark:border-blue-800'
+            : 'bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 border-purple-200 dark:border-purple-800'
           } border rounded text-sm`}
         >
           {isWarning 
@@ -48,14 +48,14 @@ export default function PasswordFeedback({ warnings, suggestions }: PasswordFeed
     <div className="mb-6">
       <div className="flex justify-between items-center mb-2">
         <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center">
-          <MessageSquare className="h-4 w-4 mr-2 text-blue-500 dark:text-blue-400" />
+          <MessageSquare className="h-4 w-4 mr-2 text-purple-500 dark:text-purple-400" />
           Feedback
         </h3>
         <Button 
           variant="link" 
           size="sm" 
           onClick={toggleVisibility}
-          className="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 p-0 h-auto"
+          className="text-xs text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300 p-0 h-auto"
         >
           {isVisible ? 'Hide details' : 'Show details'}
         </Button>

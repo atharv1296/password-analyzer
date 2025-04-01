@@ -60,19 +60,19 @@ export function analyzePassword(password: string): PasswordStrength {
       break;
     case 1:
       strengthText = "Weak";
-      strengthColor = "bg-orange-500";
+      strengthColor = "bg-pink-500";
       break;
     case 2:
       strengthText = "Moderate";
-      strengthColor = "bg-yellow-500";
+      strengthColor = "bg-purple-500";
       break;
     case 3:
       strengthText = "Strong";
-      strengthColor = "bg-green-500";
+      strengthColor = "bg-indigo-500";
       break;
     case 4:
       strengthText = "Very Strong";
-      strengthColor = "bg-green-600";
+      strengthColor = "bg-violet-600";
       break;
     default:
       strengthText = "None";
