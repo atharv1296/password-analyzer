@@ -35,21 +35,21 @@ export default function PasswordInput({ value, onChange, isAnalyzing, status }: 
   };
 
   return (
-    <div className="mb-6">
-      <Label htmlFor="password" className="text-sm font-medium mb-1">Enter your password</Label>
+    <div className="mb-6 p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-100 dark:border-gray-700 shadow-sm">
+      <Label htmlFor="password" className="text-base font-medium mb-2 block text-gray-700 dark:text-gray-300">Enter your password to analyze</Label>
       <div className="relative">
         <Input
           type={isPasswordVisible ? "text" : "password"}
           id="password"
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          placeholder="Type a password to analyze"
-          className="w-full font-mono pr-10"
+          placeholder="Type a password to check its strength"
+          className="w-full font-mono pr-10 text-base py-6 border-emerald-200 dark:border-emerald-900/30 focus:ring-emerald-500 focus:border-emerald-500"
         />
         <button
           type="button"
           onClick={togglePasswordVisibility}
-          className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
+          className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 dark:text-gray-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors"
           aria-label={isPasswordVisible ? "Hide password" : "Show password"}
         >
           {isPasswordVisible ? (
@@ -59,13 +59,16 @@ export default function PasswordInput({ value, onChange, isAnalyzing, status }: 
           )}
         </button>
       </div>
-      <p className={`text-sm mt-1 ${getStatusColor()}`}>
-        {isAnalyzing
-          ? "Analyzing password..."
-          : value
-            ? `Password is ${status?.toLowerCase()}`
-            : "Enter a password to see analysis"}
-      </p>
+      <div className="flex items-center mt-3">
+        <div className={`w-3 h-3 rounded-full mr-2 ${value ? getStatusColor().replace('text-', 'bg-') : 'bg-gray-300 dark:bg-gray-600'}`}></div>
+        <p className={`text-sm ${getStatusColor()}`}>
+          {isAnalyzing
+            ? "Analyzing password security..."
+            : value
+              ? `Password strength: ${status?.toLowerCase()}`
+              : "Enter a password to see real-time security analysis"}
+        </p>
+      </div>
     </div>
   );
 }

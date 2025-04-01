@@ -25,26 +25,26 @@ export default function CharacterRequirements({ requirements }: CharacterRequire
     isMet: boolean; 
     label: string 
   }) => (
-    <div className={`flex items-center gap-2 text-sm ${
+    <div className={`flex items-center p-2 rounded-md ${
       isMet 
-        ? "text-green-700 dark:text-green-400" 
-        : "text-gray-500 dark:text-gray-400"
+        ? "bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-400" 
+        : "bg-gray-50 dark:bg-gray-800/50 text-gray-600 dark:text-gray-400"
     }`}>
       {isMet 
-        ? <CheckIcon className="h-4 w-4 text-green-500" /> 
-        : <XIcon className="h-4 w-4 text-red-500" />
+        ? <CheckIcon className="h-4 w-4 text-emerald-500 mr-2" /> 
+        : <XIcon className="h-4 w-4 text-red-500 mr-2" />
       }
-      <span>{label}</span>
+      <span className="text-sm">{label}</span>
     </div>
   );
 
   return (
-    <div className="mb-6">
-      <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 flex items-center">
-        <CheckSquare className="h-4 w-4 mr-2 text-purple-500 dark:text-purple-400" />
+    <div className="mb-6 p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-100 dark:border-gray-700 shadow-sm">
+      <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3 flex items-center">
+        <CheckSquare className="h-5 w-5 mr-2 text-emerald-500 dark:text-emerald-400" />
         Character Requirements
       </h3>
-      <div className="grid grid-cols-2 gap-2">
+      <div className="grid grid-cols-2 gap-3">
         <RequirementItem isMet={reqs.hasMinLength} label="8+ characters" />
         <RequirementItem isMet={reqs.hasUppercase} label="Uppercase" />
         <RequirementItem isMet={reqs.hasLowercase} label="Lowercase" />

@@ -10,52 +10,67 @@ export default function ImprovementSuggestions() {
   };
 
   return (
-    <div>
-      <div className="flex justify-between items-center mb-2">
+    <div className="mb-6 p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-100 dark:border-gray-700 shadow-sm">
+      <div className="flex justify-between items-center mb-3">
         <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center">
-          <Wand2 className="h-4 w-4 mr-2 text-purple-500 dark:text-purple-400" />
-          Improvement Strategies
+          <Wand2 className="h-5 w-5 mr-2 text-emerald-500 dark:text-emerald-400" />
+          Password Creation Strategies
         </h3>
         <Button
-          variant="link"
+          variant="outline"
           size="sm"
           onClick={toggleVisibility}
-          className="text-xs text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300 p-0 h-auto"
+          className="text-xs text-emerald-600 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 border-emerald-200 dark:border-emerald-800 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 h-7 px-2"
         >
-          {isVisible ? 'Hide suggestions' : 'Show suggestions'}
+          {isVisible ? 'Hide strategies' : 'Show strategies'}
         </Button>
       </div>
       
+      {!isVisible && (
+        <p className="text-xs text-gray-500 dark:text-gray-400">
+          Learn effective techniques for creating strong, memorable passwords.
+        </p>
+      )}
+      
       {isVisible && (
-        <div className="space-y-3">
-          <div className="p-3 bg-pink-50 dark:bg-pink-900/20 rounded-lg border border-pink-100 dark:border-pink-800">
-            <h4 className="font-medium text-pink-800 dark:text-pink-300 text-sm">Use a passphrase</h4>
-            <p className="text-xs text-pink-700 dark:text-pink-400 mt-1">
+        <div className="space-y-3 mt-3">
+          <div className="p-4 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-gray-800 dark:to-gray-700 rounded-lg border border-emerald-100 dark:border-emerald-800/30">
+            <div className="flex items-center">
+              <div className="bg-emerald-400 dark:bg-emerald-500 h-8 w-8 rounded-full flex items-center justify-center text-white mr-3">1</div>
+              <h4 className="font-medium text-emerald-800 dark:text-emerald-300 text-sm">Use a passphrase</h4>
+            </div>
+            <p className="text-xs text-slate-600 dark:text-slate-300 mt-2 ml-11">
               Combine 4+ random words for a strong, memorable password.
             </p>
-            <p className="mt-2 p-1 bg-white dark:bg-gray-800 rounded border border-pink-200 dark:border-pink-700 text-xs font-mono">
+            <div className="mt-2 p-2 bg-white dark:bg-gray-800/80 rounded-md border border-emerald-200 dark:border-emerald-900/30 text-sm font-mono ml-11">
               correct-horse-battery-staple
-            </p>
+            </div>
           </div>
           
-          <div className="p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-100 dark:border-purple-800">
-            <h4 className="font-medium text-purple-800 dark:text-purple-300 text-sm">Add complexity wisely</h4>
-            <p className="text-xs text-purple-700 dark:text-purple-400 mt-1">
+          <div className="p-4 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-gray-800 dark:to-gray-700 rounded-lg border border-emerald-100 dark:border-emerald-800/30">
+            <div className="flex items-center">
+              <div className="bg-emerald-400 dark:bg-emerald-500 h-8 w-8 rounded-full flex items-center justify-center text-white mr-3">2</div>
+              <h4 className="font-medium text-emerald-800 dark:text-emerald-300 text-sm">Add complexity strategically</h4>
+            </div>
+            <p className="text-xs text-slate-600 dark:text-slate-300 mt-2 ml-11">
               Replace letters with similar-looking numbers or symbols.
             </p>
-            <p className="mt-2 p-1 bg-white dark:bg-gray-800 rounded border border-purple-200 dark:border-purple-700 text-xs font-mono">
+            <div className="mt-2 p-2 bg-white dark:bg-gray-800/80 rounded-md border border-emerald-200 dark:border-emerald-900/30 text-sm font-mono ml-11">
               p@$$w0rd → P@$$w0rd_2023!
-            </p>
+            </div>
           </div>
           
-          <div className="p-3 bg-teal-50 dark:bg-teal-900/20 rounded-lg border border-teal-100 dark:border-teal-800">
-            <h4 className="font-medium text-teal-800 dark:text-teal-300 text-sm">Avoid patterns</h4>
-            <p className="text-xs text-teal-700 dark:text-teal-400 mt-1">
-              Don't use keyboard patterns, sequential numbers, or repeated characters.
+          <div className="p-4 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-gray-800 dark:to-gray-700 rounded-lg border border-emerald-100 dark:border-emerald-800/30">
+            <div className="flex items-center">
+              <div className="bg-emerald-400 dark:bg-emerald-500 h-8 w-8 rounded-full flex items-center justify-center text-white mr-3">3</div>
+              <h4 className="font-medium text-emerald-800 dark:text-emerald-300 text-sm">Avoid predictable patterns</h4>
+            </div>
+            <p className="text-xs text-slate-600 dark:text-slate-300 mt-2 ml-11">
+              Don't use keyboard patterns, sequential numbers, or personal information.
             </p>
-            <p className="mt-2 p-1 bg-white dark:bg-gray-800 rounded border border-teal-200 dark:border-teal-700 text-xs font-mono">
-              <span className="line-through">qwerty123</span> → <span className="text-green-600 dark:text-green-400">Q7w#rTy!9</span>
-            </p>
+            <div className="mt-2 p-2 bg-white dark:bg-gray-800/80 rounded-md border border-emerald-200 dark:border-emerald-900/30 text-sm font-mono ml-11">
+              <span className="line-through">qwerty123</span> → <span className="text-emerald-600 dark:text-emerald-400">Q7w#rTy!9</span>
+            </div>
           </div>
         </div>
       )}
